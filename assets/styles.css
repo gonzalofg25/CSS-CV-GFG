@@ -1,0 +1,753 @@
+@font-face {
+    font-family: 'Josefin';
+    src: url('../Fuentes/JosefinSans-SemiBold.ttf') format('truetype');
+}
+
+*{
+    font-family:'Josefin', sans-serif;
+}
+/* Estilos del menú */
+nav {
+    background-color: #333;
+    overflow: hidden;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    float: left;
+}
+
+nav ul li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 20px;
+    text-decoration: none;
+    font-family: Arial, sans-serif; /* Cambiar la fuente del menú */
+}
+
+nav ul li a:hover {
+    background-color: #111;
+}
+
+/* Estilos de la sección de contenido */
+.content {
+    padding: 20px;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; /* Cambiar la fuente del contenido */
+    text-align: center; /* Centrar el contenido */
+    display: flex; /* Utilizar flexbox */
+    justify-content: center; /* Centrar elementos horizontalmente */
+    align-items: center; /* Centrar elementos verticalmente */
+    margin-top: calc(33vh - 100px); /* Calcular el margen superior para posicionar en la mitad de la página */
+    max-width: 800px; /* Establecer un ancho máximo */
+    margin-left: auto; /* Centrar horizontalmente */
+    margin-right: auto; /* Centrar horizontalmente */
+}
+
+/* Estilos para la imagen */
+.profile-pic {
+    display: block;
+    width: 150px;
+    height: auto;
+    position: relative; /* Añadir posición relativa */
+    z-index: 1; /* Asegurar que la imagen esté por encima de la tarjeta */
+}
+
+.tarjeta{
+    height: 250px;
+    width: 200px;
+    background-color: #101010;
+    border-radius: 10%;
+    box-shadow: 16px 14px 20px #0000008c;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 70px;
+}
+
+.tarjeta::before{
+    content: "";
+    position: absolute;
+    height: 300px;
+    width: 300px;
+    background-image: conic-gradient(rgb(100, 100, 100) 20deg, transparent 120deg);
+    animation: rotar 2s linear infinite;
+}
+
+@keyframes rotar{
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(-360deg);
+    }
+}
+
+.tarjeta::after{
+    content: "";
+    position: absolute;
+    height: 240px;
+    width: 190px;
+    background-color: #101010;
+    border-radius: 10%;
+    box-shadow: inset 16px 14px 20px #0000008c;;
+}
+
+
+@keyframes aparecer {
+    0% {
+        opacity: 0; /* La opacidad al principio es 0 */
+        transform: translateX(-33px); /* Empieza desplazado hacia la izquierda */
+    }
+    100% {
+        opacity: 1; /* La opacidad al final es 1 */
+        transform: translateX(0); /* Se desplaza a su posición original */
+    }
+}
+
+/* Aplicación de la animación al h1 */
+.content h1 {
+    margin-bottom: 20px; /* Aumentar el margen inferior del título */
+    animation: aparecer 3s ease forwards; /* Duración de la animación y función de temporización */
+}
+
+
+/* Estilos para reducir la separación entre el texto y la imagen */
+.content p {
+    margin-bottom: 10px; /* Reducir el margen inferior del párrafo */
+}
+
+body {
+    /* Fondo degradado de colores apagados */
+    background: linear-gradient(200deg, #4b4a4a, #999);
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    margin: 0; /* Eliminar márgenes predeterminados */
+    padding: 0;
+}
+
+@font-face {
+    font-family: 'Nombre';
+    src: url('../Fuentes/Franchise.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'nav';
+    src: url('../Fuentes/Versa-Versa.otf') format('truetype');
+}
+
+#nombre{
+    font-family: 'Nombre', sans-serif;
+    font-size: 80px;
+}
+
+.menu{
+    font-family: 'nav', sans-serif;
+}
+
+/*------------------------------------------------------------------------------------------------------------------------------------*/
+
+.datos{
+    font-size: 28px;
+    margin-top: 70px;
+    margin-bottom: 10px;
+}
+
+#lista-datos{
+    list-style-type:none;
+    padding: 0;
+    margin: 0;
+    opacity: 0;
+    animation: aparecer2 3s forwards;
+}
+
+#datos{
+    margin-top: 110px;
+    margin-left: 40px;
+    overflow: hidden;
+}
+
+
+footer img {
+    width: 80px;
+    height: auto;
+}
+
+#body-datos{
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+#footer-datos{
+    margin-top: auto;
+    margin-left: 40px;
+}
+
+@keyframes aparecer2 {
+    from {
+        opacity: 0; /* La lista está completamente oculta al principio */
+        transform: translateX(100%); /* Desplazamiento inicial */
+    }
+    to {
+        opacity: 1; /* La lista es completamente visible */
+        transform: translateX(0); /* Desplazamiento final, aparece de derecha a izquierda */
+    }
+}
+
+/*------------------------------------------------------------------------------------------------------------------------------------*/
+
+#per {
+    margin-left: 15px; /* Añade el margen izquierdo aquí */
+    float: left;
+    max-width: 40%;
+    animation-name: perfil;
+    animation-duration: 2s;
+    animation-timing-function: ease-out;
+    animation-delay: 0;
+    font-size: 22px;
+    margin-top: 100px;
+    line-height: 2;
+}
+
+#exp {
+    float: left;
+    margin-left: 130px;
+    margin-top: 110px;
+    max-width: 40%;
+    font-size: 22px;
+    animation-name: experiencia;
+    animation-duration: 2s;
+    animation-timing-function: ease-out;
+    animation-delay: 0;
+}
+
+@keyframes perfil {
+    0% {
+        font-size: 0px;
+    }
+    100% {
+        font-size: 22px;
+    }
+}
+
+@keyframes experiencia {
+    0% {
+        font-size: 0px;
+    }
+    100% {
+        font-size: 22px;
+    }
+}
+
+#exp3 {
+    list-style-type: circle white;
+}
+
+#exp4 {
+    line-height: 2;
+}
+
+.exp5 {
+    color: white;
+}
+
+.pex {
+    color: white;
+    text-align: center;
+}
+
+#per2{
+    margin-left: 30px;
+}
+
+
+/*------------------------------------------------------------------------------------------------------------------------------------*/
+
+.progress-bar {
+    width: 300px; /* Ajustamos el ancho de la barra de progreso */
+    height: 30px;
+    background-color: #f2f2f2;
+    border-radius: 5px;
+    overflow: hidden;
+    cursor: pointer;
+  }
+  
+  #java {
+    width: 0%; /* Porcentaje inicial de la barra de progreso */
+    height: 100%;
+    background-color: #4caf50;
+    border-radius: 5px;
+    transition: width 3s ease; /* Transición de la animación */
+    animation: barra-java 3s forwards;
+    animation-delay: 1s;
+  }
+
+  #html{
+    width: 0%; /* Porcentaje inicial de la barra de progreso */
+    height: 100%;
+    background-color: orange;
+    border-radius: 5px;
+    transition: width 3s ease;
+    animation: barra-html 3s forwards;
+    animation-delay: 1s;
+  }
+
+  #css{
+    width: 0%; /* Porcentaje inicial de la barra de progreso */
+    height: 100%;
+    background-color: rgb(85, 157, 206);
+    border-radius: 5px;
+    transition: width 3s ease;
+    animation: barra-css 3s forwards;
+    animation-delay: 1s;
+  }
+
+  #js{
+    width: 0%; /* Porcentaje inicial de la barra de progreso */
+    height: 100%;
+    background-color: yellow;
+    border-radius: 5px;
+    transition: width 3s ease;
+    animation: barra-js 3s forwards;
+    animation-delay: 1s;
+  }
+
+  #react{
+    width: 0%; /* Porcentaje inicial de la barra de progreso */
+    height: 100%;
+    background-color: rgb(72, 133, 224);
+    border-radius: 5px;
+    transition: width 3s ease;
+    animation: barra-react 3s forwards;
+    animation-delay: 1s;
+  }
+  
+  
+  @keyframes barra-java {
+    0% {
+      width: 0%; /* Comienza desde 0% */
+    }
+    100% {
+      width: 75%; /* Alcanza el porcentaje definido */
+    }
+  }
+
+  
+  @keyframes barra-html {
+    0% {
+      width: 0%; /* Comienza desde 0% */
+    }
+    100% {
+      width: 88%; /* Alcanza el porcentaje definido */
+    }
+  }
+
+  
+  @keyframes barra-css {
+    0% {
+      width: 0%; /* Comienza desde 0% */
+    }
+    100% {
+      width: 80%; /* Alcanza el porcentaje definido */
+    }
+  }
+
+  
+  @keyframes barra-js {
+    0% {
+      width: 0%; /* Comienza desde 0% */
+    }
+    100% {
+      width: 83%; /* Alcanza el porcentaje definido */
+    }
+  }
+
+  
+  @keyframes barra-react {
+    0% {
+      width: 0%; /* Comienza desde 0% */
+    }
+    100% {
+      width: 77%; /* Alcanza el porcentaje definido */
+    }
+  }
+
+#for,#hab{color: white;}
+
+#barrahtml{
+    color: white;
+}
+
+#formacion{margin-left: 15px;
+    float: left;
+    position: relative;
+    font-size: 22px;
+    animation-name: formacion;
+    animation-duration: 3s;  
+    animation-delay: 1s;
+    animation-fill-mode: backwards;
+}
+
+#habilidades{float: left;
+    margin-left: 400px;
+    position: relative;
+    font-size: 22px;
+
+}
+
+.len:hover{
+    width: 200%;
+    height: 33px;
+    font-size: 14px;
+}
+
+/*------------------------------------------------------------------------------------------------------------------------------------*/
+/*Port*/
+@media only screen and (max-width: 1620px){
+    #nombre{
+        font-size: 60px;
+    }
+    .tarjeta{
+        height: 200px;
+        width: 150px;
+    }
+    .profile-pic{
+        width: 120px;
+    }
+    .tarjeta::before{
+        content: "";
+        position: absolute;
+        height: 250px;
+        width: 250px;
+        background-image: conic-gradient(rgb(100, 100, 100) 20deg, transparent 120deg);
+        animation: rotar 2s linear infinite;
+    }
+    .tarjeta::after{
+        content: "";
+        position: absolute;
+        height: 190px;
+        width: 140px;
+        background-color: #101010;
+        border-radius: 10%;
+        box-shadow: inset 16px 14px 20px #0000008c;;
+    }
+    /*---------------------------------------------------------------------------*/
+
+    .datos{
+        font-size: 22px;
+        margin-top: 40px;
+        margin-bottom: 6px;
+    }
+    
+    #datos{
+        margin-top: 70px;
+    }
+    
+    
+    footer img {
+        width: 60px;
+    }
+
+    /*---------------------------------------------------------------------------*/
+
+    #per{
+        margin-left: 15px;
+        max-width: 40%;
+        font-size: 18px;
+        margin-top: 50px;
+    }
+    
+    
+    #exp{
+        margin-left: 100px;
+        margin-top: 60px;
+        max-width: 40%;
+        font-size: 18px;
+    }
+    
+    @keyframes perfil{
+        0%{
+            font-size: 0px;
+            
+        }
+        100%{
+            font-size: 18px;
+        }
+    }
+    
+    @keyframes experiencia{
+        0%{
+            font-size: 0px;
+        }
+        100%{
+            font-size:18px;
+        }
+    }
+    
+    /*---------------------------------------------------------------------------*/
+
+    .progress-bar {
+        width: 200px; /* Ajustamos el ancho de la barra de progreso */
+        height: 20px;
+    }
+
+    #formacion{
+        font-size: 19px;    
+    }
+    
+    #habilidades{
+        margin-left: 180px;
+        position: relative;
+        font-size: 19px;
+    
+    }
+    
+    .len:hover{
+        width: 200%;
+        height: 33px;
+        font-size: 14px;
+    }
+}
+
+
+/*------------------------------------------------------------------------------------------------------------------------------------*/
+@media only screen and (min-width: 601px) and (max-width: 1024px){
+    #formacion, #habilidades {
+        float: none;
+        width: 80%; /* Ajusta el ancho de los divs */
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .lis-for, .hab {
+        font-size: 2.4vw; /* Ajusta el tamaño de fuente según sea necesario */
+    }
+
+}
+
+/*------------------------------------------------------------------------------------------------------------------------------------*/
+
+
+@media only screen and (max-width:600px){
+
+    nav {
+        display: flex;
+        justify-content: center;
+    }
+    
+    #lista-menu {
+        padding: 0;
+        margin: 0;
+        list-style-type: none;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .lista-menu {
+        margin-bottom: 8px;
+    }
+    
+    .menu {
+        padding: 8px;
+    }
+    .content {
+        margin-top: 40px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .tarjeta {
+        margin-top: 40px;
+        margin-left: 0px;
+    }
+
+    /*---------------------------------------------------------------------------*/
+
+    .datos {
+        font-size: 4.8vw; /* Tamaño de fuente más grande en pantallas más pequeñas */
+        margin-top: 8vw; /* Margen superior más grande en pantallas más pequeñas */
+        margin-bottom: 2vw; /* Margen inferior más grande en pantallas más pequeñas */
+    }
+    
+    #datos{
+        margin-top: 40px;
+    }
+    
+    footer img {
+        margin-top: 20px;
+        min-width: 20px;
+        width: 10vw;
+    }
+
+    /*------------------------------------------------------------------------------*/
+
+    #per,#exp {
+        float: none;
+        max-width: 80%;
+        margin-left: auto;
+        margin-right: auto;
+        opacity: 0; /* Inicialmente oculto */
+    }
+
+            /* Ajuste del tamaño del texto */
+            #per h2, #exp h2 {
+                font-size: 5vw; /* El tamaño del texto será el 5% del ancho de la ventana gráfica */
+            }
+
+            #per p, #exp li {
+                font-size: 4vw; /* El tamaño del texto será el 3% del ancho de la ventana gráfica */
+            }
+
+            /* Animaciones */
+            #per {
+                animation-name: animacionPer;
+                animation-duration: 2s;
+                animation-delay: 0s;
+                animation-fill-mode: forwards; /* Mantiene el estado final de la animación */
+            }
+
+            #exp {
+                animation-name: animacionExp;
+                animation-duration: 2s;
+                animation-delay: 0s;
+                animation-fill-mode: forwards; /* Mantiene el estado final de la animación */
+            }
+
+            @keyframes animacionPer {
+                0% {
+                    font-size: 0vw; /* Tamaño de fuente inicial */
+                    opacity: 0; /* Opacidad inicial */
+                }
+                100% {
+                    font-size: 5vw; /* Tamaño de fuente final */
+                    opacity: 1; /* Opacidad final */
+                }
+            }
+
+            @keyframes animacionExp {
+                0% {
+                    font-size: 0vw; /* Tamaño de fuente inicial */
+                    opacity: 0; /* Opacidad inicial */
+                }
+                100% {
+                    font-size: 3vw; /* Tamaño de fuente final */
+                    opacity: 1; /* Opacidad final */
+                }
+            }
+
+    /*------------------------------------------------------------------------------*/
+
+    #formacion,#habilidades {
+        float: none;
+        max-width: 80%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .lis-for,.hab{
+        font-size: 3.7vw;
+    }
+
+    #formacion{
+        font-size: 4vw;
+    }
+
+    #habilidades{
+        font-size: 4vw;
+    }
+
+    .progress-bar{
+        text-align: center;
+        max-width: 40vw;
+    }
+}
+
+@media only screen and (min-width: 601px) and (max-width: 702px) {
+    nav {
+        display: flex;
+        justify-content: center;
+    }
+
+    #lista-menu {
+        padding: 0;
+        margin: 0;
+        list-style-type: none;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .lista-menu {
+        margin-bottom: 8px;
+    }
+
+    .menu {
+        padding: 8px;
+    }
+}
+
+@media only screen and (min-width:601px) and (max-width:880px){
+    #per,#exp {
+        float: none;
+        max-width: 80%;
+        margin-left: auto;
+        margin-right: auto;
+        opacity: 0; /* Inicialmente oculto */
+    }
+
+            /* Ajuste del tamaño del texto */
+            #per h2, #exp h2 {
+                font-size: 20px; /* El tamaño del texto será el 5% del ancho de la ventana gráfica */
+            }
+
+            #per p, #exp li {
+                font-size: 18px; /* El tamaño del texto será el 3% del ancho de la ventana gráfica */
+            }
+
+            /* Animaciones */
+            #per {
+                animation-name: animacionPer;
+                animation-duration: 2s;
+                animation-delay: 0s;
+                animation-fill-mode: forwards; /* Mantiene el estado final de la animación */
+            }
+
+            #exp {
+                animation-name: animacionExp;
+                animation-duration: 2s;
+                animation-delay: 0s;
+                animation-fill-mode: forwards; /* Mantiene el estado final de la animación */
+            }
+
+            @keyframes animacionPer {
+                0% {
+                    font-size: 0px; /* Tamaño de fuente inicial */
+                    opacity: 0; /* Opacidad inicial */
+                }
+                100% {
+                    font-size: 18px; /* Tamaño de fuente final */
+                    opacity: 1; /* Opacidad final */
+                }
+            }
+
+            @keyframes animacionExp {
+                0% {
+                    font-size: 0px; /* Tamaño de fuente inicial */
+                    opacity: 0; /* Opacidad inicial */
+                }
+                100% {
+                    font-size: 18px; /* Tamaño de fuente final */
+                    opacity: 1; /* Opacidad final */
+                }
+            }
+}
