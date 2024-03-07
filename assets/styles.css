@@ -35,7 +35,7 @@ nav ul li a:hover {
     background-color: #111;
 }
 
-/* Estilos de la sección de contenido */
+/* index.html ---------------------------------------------------------*/
 .content {
     padding: 20px;
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; /* Cambiar la fuente del contenido */
@@ -57,7 +57,7 @@ nav ul li a:hover {
     position: relative; /* Añadir posición relativa */
     z-index: 1; /* Asegurar que la imagen esté por encima de la tarjeta */
 }
-
+/*Estilos para el div que contiene la imagen*/
 .tarjeta{
     height: 250px;
     width: 200px;
@@ -80,7 +80,7 @@ nav ul li a:hover {
     background-image: conic-gradient(rgb(100, 100, 100) 20deg, transparent 120deg);
     animation: rotar 2s linear infinite;
 }
-
+/*Animación del div de la imagen*/
 @keyframes rotar{
     from{
         transform: rotate(0deg);
@@ -100,7 +100,7 @@ nav ul li a:hover {
     box-shadow: inset 16px 14px 20px #0000008c;;
 }
 
-
+/*Animación para el h1*/
 @keyframes aparecer {
     0% {
         opacity: 0; /* La opacidad al principio es 0 */
@@ -123,7 +123,7 @@ nav ul li a:hover {
 .content p {
     margin-bottom: 10px; /* Reducir el margen inferior del párrafo */
 }
-
+/*Estilos para el body de todas las páginas*/
 body {
     /* Fondo degradado de colores apagados */
     background: linear-gradient(200deg, #4b4a4a, #999);
@@ -132,34 +132,35 @@ body {
     margin: 0; /* Eliminar márgenes predeterminados */
     padding: 0;
 }
-
+/*Tipografía para el nombre*/
 @font-face {
     font-family: 'Nombre';
     src: url('../Fuentes/Franchise.ttf') format('truetype');
 }
-
+/*Tipografía para el nav*/
 @font-face {
     font-family: 'nav';
     src: url('../Fuentes/Versa-Versa.otf') format('truetype');
 }
-
+/*Estilos para el h1 con id nombre para la tipografía y el tamaño*/
 #nombre{
     font-family: 'Nombre', sans-serif;
     font-size: 80px;
 }
-
+/*Estilos para el menú con id nombre para la tipografía y el tamaño*/
 .menu{
     font-family: 'nav', sans-serif;
 }
 
 /*------------------------------------------------------------------------------------------------------------------------------------*/
-
+/* Datos-personales.html ---------------------------------------------------------*/
+/*Estilos para los elementos con clase datos*/
 .datos{
     font-size: 28px;
     margin-top: 70px;
     margin-bottom: 10px;
 }
-
+/*Estilos para la lista con id lista-datos*/
 #lista-datos{
     list-style-type:none;
     padding: 0;
@@ -167,30 +168,30 @@ body {
     opacity: 0;
     animation: aparecer2 3s forwards;
 }
-
+/*Estilos para div con id datos*/
 #datos{
     margin-top: 110px;
     margin-left: 40px;
     overflow: hidden;
 }
 
-
+/*Estilos para las imagenes del footer*/
 footer img {
     width: 80px;
     height: auto;
 }
-
+/*Estilos para el body*/
 #body-datos{
     display: flex;
     flex-direction: column;
     min-height: 100vh;
 }
-
+/*Estilos para el footer con id footer-datos*/
 #footer-datos{
     margin-top: auto;
     margin-left: 40px;
 }
-
+/*Animación para la lista con los datos*/
 @keyframes aparecer2 {
     from {
         opacity: 0; /* La lista está completamente oculta al principio */
@@ -203,9 +204,10 @@ footer img {
 }
 
 /*------------------------------------------------------------------------------------------------------------------------------------*/
-
+/* Perfil-Experiencia.html ---------------------------------------------------------*/
+/*Estilos para el div con la parte del perfil*/
 #per {
-    margin-left: 15px; /* Añade el margen izquierdo aquí */
+    margin-left: 15px;
     float: left;
     max-width: 40%;
     animation-name: perfil;
@@ -216,7 +218,7 @@ footer img {
     margin-top: 100px;
     line-height: 2;
 }
-
+/*Estilos para el div con la parte de experiencia*/
 #exp {
     float: left;
     margin-left: 130px;
@@ -228,7 +230,7 @@ footer img {
     animation-timing-function: ease-out;
     animation-delay: 0;
 }
-
+/*Animación para la parte del perfil*/
 @keyframes perfil {
     0% {
         font-size: 0px;
@@ -237,7 +239,7 @@ footer img {
         font-size: 22px;
     }
 }
-
+/*Animación para la parte de la experiencia*/
 @keyframes experiencia {
     0% {
         font-size: 0px;
@@ -246,7 +248,7 @@ footer img {
         font-size: 22px;
     }
 }
-
+/*Estilos para la lista con id exp3*/
 #exp3 {
     list-style-type: circle white;
 }
@@ -254,44 +256,45 @@ footer img {
 #exp4 {
     line-height: 2;
 }
-
+/*Estilo para los elementos con clase exp5*/
 .exp5 {
     color: white;
 }
-
+/*Estilos para los elementos con etiquetas h2*/
 .pex {
     color: white;
     text-align: center;
 }
-
+/*Estilo para texto de la parte del perfil*/
 #per2{
     margin-left: 30px;
 }
 
 
 /*------------------------------------------------------------------------------------------------------------------------------------*/
-
+/* Formación-habilidades.html.html ---------------------------------------------------------*/
+/*Estilos para los div con esta clase para las barras de progreso*/
 .progress-bar {
-    width: 300px; /* Ajustamos el ancho de la barra de progreso */
+    width: 300px;
     height: 30px;
     background-color: #f2f2f2;
     border-radius: 5px;
     overflow: hidden;
     cursor: pointer;
   }
-  
+  /*Estilos para la barra de progreso con id java*/
   #java {
-    width: 0%; /* Porcentaje inicial de la barra de progreso */
+    width: 0%;
     height: 100%;
     background-color: #4caf50;
     border-radius: 5px;
-    transition: width 3s ease; /* Transición de la animación */
+    transition: width 3s ease;
     animation: barra-java 3s forwards;
     animation-delay: 1s;
   }
-
+  /*Estilos para la barra de progreso con id html*/
   #html{
-    width: 0%; /* Porcentaje inicial de la barra de progreso */
+    width: 0%;
     height: 100%;
     background-color: orange;
     border-radius: 5px;
@@ -299,9 +302,9 @@ footer img {
     animation: barra-html 3s forwards;
     animation-delay: 1s;
   }
-
+  /*Estilos para la barra de progreso con id css*/
   #css{
-    width: 0%; /* Porcentaje inicial de la barra de progreso */
+    width: 0%;
     height: 100%;
     background-color: rgb(85, 157, 206);
     border-radius: 5px;
@@ -309,9 +312,9 @@ footer img {
     animation: barra-css 3s forwards;
     animation-delay: 1s;
   }
-
+  /*Estilos para la barra de progreso con id js*/
   #js{
-    width: 0%; /* Porcentaje inicial de la barra de progreso */
+    width: 0%;
     height: 100%;
     background-color: yellow;
     border-radius: 5px;
@@ -319,9 +322,9 @@ footer img {
     animation: barra-js 3s forwards;
     animation-delay: 1s;
   }
-
+  /*Estilos para la barra de progreso con id react*/
   #react{
-    width: 0%; /* Porcentaje inicial de la barra de progreso */
+    width: 0%;
     height: 100%;
     background-color: rgb(72, 133, 224);
     border-radius: 5px;
@@ -330,7 +333,7 @@ footer img {
     animation-delay: 1s;
   }
   
-  
+  /*Animación para la barra de progreso de java*/
   @keyframes barra-java {
     0% {
       width: 0%; /* Comienza desde 0% */
@@ -340,7 +343,7 @@ footer img {
     }
   }
 
-  
+  /*Animación para la barra de progreso de html*/
   @keyframes barra-html {
     0% {
       width: 0%; /* Comienza desde 0% */
@@ -350,7 +353,7 @@ footer img {
     }
   }
 
-  
+  /*Animación para la barra de progreso de css*/
   @keyframes barra-css {
     0% {
       width: 0%; /* Comienza desde 0% */
@@ -360,7 +363,7 @@ footer img {
     }
   }
 
-  
+  /*Animación para la barra de progreso de js*/
   @keyframes barra-js {
     0% {
       width: 0%; /* Comienza desde 0% */
@@ -370,7 +373,7 @@ footer img {
     }
   }
 
-  
+  /*Animación para la barra de progreso de react*/
   @keyframes barra-react {
     0% {
       width: 0%; /* Comienza desde 0% */
@@ -379,13 +382,9 @@ footer img {
       width: 77%; /* Alcanza el porcentaje definido */
     }
   }
-
+/*Estilos para los h2 de la parte de formación y habilidades*/
 #for,#hab{color: white;}
-
-#barrahtml{
-    color: white;
-}
-
+/*Estilos para el div de formación*/
 #formacion{margin-left: 15px;
     float: left;
     position: relative;
@@ -395,18 +394,11 @@ footer img {
     animation-delay: 1s;
     animation-fill-mode: backwards;
 }
-
+/*Estilos para el div de habilidades*/
 #habilidades{float: left;
     margin-left: 400px;
     position: relative;
     font-size: 22px;
-
-}
-
-.len:hover{
-    width: 200%;
-    height: 33px;
-    font-size: 14px;
 }
 
 /*------------------------------------------------------------------------------------------------------------------------------------*/
@@ -496,7 +488,7 @@ footer img {
     /*---------------------------------------------------------------------------*/
     /*Formación-habilidades.html*/
     .progress-bar {
-        width: 200px; /* Ajustamos el ancho de la barra de progreso */
+        width: 200px;
         height: 20px;
     }
 
@@ -520,16 +512,18 @@ footer img {
 
 
 /*------------------------------------------------------------------------------------------------------------------------------------*/
+/*Responsive para que en la página de Formación-habilidades.html los divs estén 
+posicionados uno encima del otro*/
 @media only screen and (min-width: 601px) and (max-width: 1024px){
     #formacion, #habilidades {
         float: none;
-        width: 80%; /* Ajusta el ancho de los divs */
+        width: 80%;
         margin-left: auto;
         margin-right: auto;
     }
 
     .lis-for, .hab {
-        font-size: 2.4vw; /* Ajusta el tamaño de fuente según sea necesario */
+        font-size: 2.4vw;
     }
 
 }
