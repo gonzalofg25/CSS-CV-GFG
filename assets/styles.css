@@ -410,8 +410,9 @@ footer img {
 }
 
 /*------------------------------------------------------------------------------------------------------------------------------------*/
-/*Port*/
+/*Tamaño portátil*/
 @media only screen and (max-width: 1620px){
+    /*index.html*/
     #nombre{
         font-size: 60px;
     }
@@ -440,7 +441,7 @@ footer img {
         box-shadow: inset 16px 14px 20px #0000008c;;
     }
     /*---------------------------------------------------------------------------*/
-
+    /*Datos-personales.html*/
     .datos{
         font-size: 22px;
         margin-top: 40px;
@@ -457,7 +458,7 @@ footer img {
     }
 
     /*---------------------------------------------------------------------------*/
-
+    /*Perfil-experiencia.html*/
     #per{
         margin-left: 15px;
         max-width: 40%;
@@ -493,7 +494,7 @@ footer img {
     }
     
     /*---------------------------------------------------------------------------*/
-
+    /*Formación-habilidades.html*/
     .progress-bar {
         width: 200px; /* Ajustamos el ancho de la barra de progreso */
         height: 20px;
@@ -535,7 +536,7 @@ footer img {
 
 /*------------------------------------------------------------------------------------------------------------------------------------*/
 
-
+/*Tamaño móvil*/
 @media only screen and (max-width:600px){
 
     nav {
@@ -559,6 +560,7 @@ footer img {
     .menu {
         padding: 8px;
     }
+    /*index.html*/
     .content {
         margin-top: 40px;
         display: flex;
@@ -572,7 +574,7 @@ footer img {
     }
 
     /*---------------------------------------------------------------------------*/
-
+    /*Datos-personales.html*/
     .datos {
         font-size: 4.8vw; /* Tamaño de fuente más grande en pantallas más pequeñas */
         margin-top: 8vw; /* Margen superior más grande en pantallas más pequeñas */
@@ -583,14 +585,22 @@ footer img {
         margin-top: 40px;
     }
     
+    #footer-datos {
+        position: fixed; /* Fijar el footer */
+        bottom: 0; /* Lo ancla en la parte inferior */
+        left: 0; /* Lo coloca en la esquina inferior izquierda */
+        width: 100%; /* Ocupa todo el ancho */
+        padding: 10px; /* Espaciado interno */
+    }
+    
     footer img {
-        margin-top: 20px;
+        width: 10vw; /* Tamaño de la imagen relativo al ancho de la pantalla */
         min-width: 20px;
-        width: 10vw;
+        margin-top: 5px; /* Espacio superior entre imágenes */
     }
 
     /*------------------------------------------------------------------------------*/
-
+    /*Perfil-experiencia.html*/
     #per,#exp {
         float: none;
         max-width: 80%;
@@ -646,7 +656,7 @@ footer img {
             }
 
     /*------------------------------------------------------------------------------*/
-
+    /*Formación-habilidades.html*/
     #formacion,#habilidades {
         float: none;
         max-width: 80%;
@@ -671,7 +681,8 @@ footer img {
         max-width: 40vw;
     }
 }
-
+/*-------------------------------------------------------------------------------*/
+/*Este responsive lo tengo puesto para que el nav en estos píxeles sea igual que el de tamaño móvil */
 @media only screen and (min-width: 601px) and (max-width: 702px) {
     nav {
         display: flex;
